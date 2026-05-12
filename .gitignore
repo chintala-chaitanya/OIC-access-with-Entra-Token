@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+venv/
+.env
+*.log
+
+# Local deployment and cloud credentials
+.oci/
+*.pem
+*.key
+local.settings.json
+deploy/
+scripts/

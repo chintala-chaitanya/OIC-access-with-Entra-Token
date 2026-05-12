@@ -1,0 +1,26 @@
+schema_version: 20180708
+name: entra-oic-authorizer
+version: 0.0.6
+runtime: python
+build_image: fnproject/python:3.12-dev
+run_image: fnproject/python:3.12
+entrypoint: /python/bin/fdk /function/func.py handler
+memory: 256
+timeout: 30
+config:
+  AUTHORIZER_SCOPE: oic.invoke
+  ENTRA_ALLOWED_CLIENT_IDS: <caller-client-id-1,caller-client-id-2>
+  ENTRA_AUDIENCE: <api-app-client-id-or-app-id-uri>
+  ENTRA_AUTHORITY_HOST: https://login.microsoftonline.com
+  ENTRA_JWKS_CACHE_SECONDS: "3600"
+  ENTRA_REQUIRED_ROLES: OIC.Invoke
+  ENTRA_REQUIRED_SCOPES: ""
+  ENTRA_TENANT_ID: <tenant-guid>
+  FUNCTION_CONFIG_CACHE_SECONDS: "300"
+  HTTP_TIMEOUT_SECONDS: "10"
+  JWT_LEEWAY_SECONDS: "60"
+  OCI_IAM_CLIENT_ID: <oci-confidential-app-client-id>
+  OCI_IAM_CLIENT_SECRET_OCID: <oci-vault-secret-ocid>
+  OCI_IAM_SCOPE: <oic-scope>
+  OCI_IAM_TOKEN_ENDPOINT: https://<domain-url>/oauth2/v1/token
+  OCI_TOKEN_AUTH_METHOD: client_secret_basic

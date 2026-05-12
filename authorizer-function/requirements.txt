@@ -1,0 +1,4 @@
+fdk>=0.1.76
+oci>=2.125.0
+requests>=2.31.0
+PyJWT[crypto]>=2.8.0

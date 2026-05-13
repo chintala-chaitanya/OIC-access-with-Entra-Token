@@ -1,5 +1,7 @@
 # OIC Access With Microsoft Entra Token
 
+> Note: This repository contains sample code that demonstrates how to use a Microsoft Entra ID access token to call Oracle Integration Cloud through OCI API Gateway and an OCI Functions custom authorizer. Review, test, and adapt the code for your own environment, security requirements, operational standards, and compliance guidelines before using it in production.
+
 This project builds an OCI API Gateway authorizer function for this flow:
 
 1. A client gets a Microsoft Entra ID access token using client credentials.
